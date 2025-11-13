@@ -10,9 +10,17 @@ public class TimeCalc {
         int newHours = totalHours % 24;
         int newMinutes = (totalMinutes - (totalHours * 60));
 
-        System.out.printf (newHours + ":" + newMinutes);
+        String newHoursStr = Integer.toString(newHours);
+        String newMinutesStr = Integer.toString(newMinutes);
+
+        if (newHours < 10) {
+            newHoursStr =  "0" + newHoursStr;
+        }
+        if (newMinutes < 10) {
+            newMinutesStr =  "0" + newMinutesStr;
+        }
+
+        System.out.printf (newHoursStr + ":" + newMinutesStr);
         
-
-
     }
 }
